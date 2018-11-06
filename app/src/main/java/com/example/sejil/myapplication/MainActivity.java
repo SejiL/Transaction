@@ -54,7 +54,7 @@ public class MainActivity extends AppCompatActivity {
                 if (sender.equals("+9820004000")) {
                     String[] split_enters = message.split("\n");
                     String[] split_money = split_enters[1].split(":");
-                    if (split_money[0].equals("انتقال")) {
+                    if (split_money[0].equals("انتقال") || split_money[0].equals("خریداینترنتی") || split_money[0].equals("برداشت") || split_money[0].equals("خودپرداز")) {
                         String money = split_money[1];
                         if (money.substring(money.length() - 1).equals("-")) {
                             imageMain.setImageResource(R.drawable.pic2);
