@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">Transaction</string>
+    <string name="main_title">نکنه میخوای باز خرجاتو بزنی!</string>
+    <string name="up_money_msg">خوبه! یکم پول اومد تو کارتت</string>
+    <string name="down_money_msg">این چرا کم شد؟ سریع بگو!</string>
+    <string name="show_db">نمایش اطلاعات</string>
+    <string name="save_btn">بزن بره!</string>
+    <string name="details_downmoney_hint">این خرجت واسه چی بود؟</string>
+    <string name="price_downmoney_hint">چقد خرج کردی؟</string>
+    <string name="details_upmoney_hint">چرا اومد حسابت؟</string>
+    <string name="price_upmoney_hint">چقدر بود؟</string>
+    <string name="details_default_hint">چرا خرج کردی؟</string>
+    <string name="price_default_hint">چقدر خرج کردی؟</string>
+    <string name="saved_msg">ثبتش کردم, سرماه میره تو پاچت.</string>
+    <string name="complete_fields_msg">فیلدارو پر کن :|</string>
+</resources>
