@@ -1,2 +1,6 @@
-# Transaction
-The Transaction is just a cool application for managing your personal account.
+# تراکنش
+تراکنش, فقط یک اپلیکیشن باحالو سادست برای مدیریت حسابهای شخصی.
+
+# اهداف
+-ساده بودن
+-کاربردی بودن
