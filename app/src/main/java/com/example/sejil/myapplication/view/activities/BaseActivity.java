@@ -1,4 +1,4 @@
-package com.example.sejil.myapplication.Base;
+package com.example.sejil.myapplication.view.activities;
 
 import android.content.Context;
 import android.os.Bundle;

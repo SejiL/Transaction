@@ -1,4 +1,4 @@
-package com.example.sejil.myapplication;
+package com.example.sejil.myapplication.utility;
 
 import android.content.BroadcastReceiver;
 import android.content.Context;
@@ -6,6 +6,8 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.telephony.SmsMessage;
 import android.util.Log;
+
+import com.example.sejil.myapplication.view.activities.MainActivity;
 
 public class SMSreceiver extends BroadcastReceiver {
     public void onReceive(Context context, Intent intent) {

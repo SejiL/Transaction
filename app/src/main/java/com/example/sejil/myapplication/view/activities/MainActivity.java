@@ -1,4 +1,4 @@
-package com.example.sejil.myapplication;
+package com.example.sejil.myapplication.view.activities;
 
 import android.Manifest;
 import android.content.Intent;
@@ -16,7 +16,9 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.example.sejil.myapplication.Base.BaseActivity;
+import com.example.sejil.myapplication.R;
+import com.example.sejil.myapplication.model.TransActions;
+import com.example.sejil.myapplication.database.DatabaseHandler;
 
 import java.util.Calendar;
 import java.util.Date;
