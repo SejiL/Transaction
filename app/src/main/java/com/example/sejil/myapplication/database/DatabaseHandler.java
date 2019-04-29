@@ -1,12 +1,13 @@
-package com.example.sejil.myapplication;
+package com.example.sejil.myapplication.database;
 
 import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
-import android.support.annotation.Nullable;
-import android.util.Log;
+import androidx.annotation.Nullable;
+
+import com.example.sejil.myapplication.model.TransActions;
 
 public class DatabaseHandler extends SQLiteOpenHelper {
 

@@ -1,4 +1,4 @@
-package com.example.sejil.myapplication;
+package com.example.sejil.myapplication.model;
 
 public class TransActions {
     public String price;

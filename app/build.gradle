@@ -8,7 +8,7 @@ android {
         targetSdkVersion TARGET_SDK_VERSION as int
         versionCode VERSION_CODE as int
         versionName VERSION_NAME as String
-        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         vectorDrawables.useSupportLibrary = true
     }
     buildTypes {
@@ -21,11 +21,8 @@ android {
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
-    implementation "com.android.support:appcompat-v7:$SUPPORT_PACKAGE_VERSION"
-    implementation "com.android.support.constraint:constraint-layout:$CONSTRAINTLAYOUT_VERSION"
-    testImplementation "junit:junit:$JUNIT_VERSION"
-    androidTestImplementation "com.android.support.test:runner:$TEST_RUNNER_VERSION"
-    androidTestImplementation "com.android.support.test.espresso:espresso-core:$ESPRESSO_VERSION"
+    implementation "androidx.appcompat:appcompat:$ANDROIDX_APPCOMPAT_VERSION"
+    implementation "androidx.constraintlayout:constraintlayout:$CONSTRAINTLAYOUT_VERSION"
     implementation "io.github.inflationx:calligraphy3:$CALLIGRAPHY_VERSION"
     implementation "io.github.inflationx:viewpump:$VIEWPUMP_VERSION"
 
