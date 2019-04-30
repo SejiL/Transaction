@@ -19,6 +19,7 @@ import android.widget.Toast;
 import com.example.sejil.myapplication.R;
 import com.example.sejil.myapplication.model.TransActions;
 import com.example.sejil.myapplication.database.DatabaseHandler;
+import com.example.sejil.myapplication.utility.MoneyTextWatcher;
 
 import java.util.Calendar;
 import java.util.Date;
@@ -40,7 +41,7 @@ public class MainActivity extends BaseActivity {
         final Button btnShow = findViewById(R.id.show_db);
         final EditText priceET = findViewById(R.id.price_et);
         final EditText detailsET = findViewById(R.id.details_et);
-
+        priceET.addTextChangedListener(new MoneyTextWatcher(priceET));
         final Date currentTime = Calendar.getInstance().getTime();
 
         final DatabaseHandler databaseHandler = new DatabaseHandler(this);
