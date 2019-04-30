@@ -7,6 +7,7 @@ import androidx.annotation.LayoutRes;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
+import butterknife.ButterKnife;
 import io.github.inflationx.viewpump.ViewPumpContextWrapper;
 
 public abstract class BaseActivity extends AppCompatActivity {
@@ -20,7 +21,7 @@ public abstract class BaseActivity extends AppCompatActivity {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(getContentViewRes());
-
+        ButterKnife.bind(this);
     }
 
     @Override

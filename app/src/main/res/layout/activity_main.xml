@@ -7,7 +7,7 @@
     tools:context=".view.activities.MainActivity">
 
     <EditText
-        android:id="@+id/price_et"
+        android:id="@+id/edt_expense_price"
         android:layout_width="350dp"
         android:layout_height="60dp"
         android:layout_marginStart="5dp"
@@ -29,7 +29,7 @@
         tools:ignore="MissingPrefix" />
 
     <EditText
-        android:id="@+id/details_et"
+        android:id="@+id/edt_expense_details"
         android:layout_width="350dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="5dp"
@@ -38,7 +38,8 @@
         android:layout_marginEnd="5dp"
         android:layout_marginRight="5dp"
         android:ems="10"
-        android:gravity="right|center"
+        android:gravity="right|top"
+        android:padding="8dp"
         android:hint="@string/details_default_hint"
         android:inputType="textMultiLine"
         android:lines="4"
@@ -47,10 +48,10 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/price_et" />
+        app:layout_constraintTop_toBottomOf="@+id/edt_expense_price" />
 
     <Button
-        android:id="@+id/save_bt"
+        android:id="@+id/btn_save_expense"
         android:layout_width="0dp"
         android:layout_height="48dp"
         android:background="@color/colorPrimary"
@@ -63,12 +64,12 @@
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button
-        android:id="@+id/show_db"
+        android:id="@+id/btn_show_expenses"
         android:layout_width="0dp"
         android:layout_height="48dp"
         android:text="@string/show_db"
         android:visibility="gone"
-        app:layout_constraintBottom_toTopOf="@+id/save_bt"
+        app:layout_constraintBottom_toTopOf="@+id/btn_save_expense"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 

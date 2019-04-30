@@ -24,7 +24,22 @@ import com.example.sejil.myapplication.utility.MoneyTextWatcher;
 import java.util.Calendar;
 import java.util.Date;
 
+import butterknife.BindView;
+
 public class MainActivity extends BaseActivity {
+
+    @BindView(R.id.iv_main)
+    ImageView ivMain;
+    @BindView(R.id.tv_main)
+    TextView tvMain;
+    @BindView(R.id.edt_expense_price)
+    EditText edtPrice;
+    @BindView(R.id.edt_expense_details)
+    EditText edtDetails;
+    @BindView(R.id.btn_save_expense)
+    Button btnSave;
+    @BindView(R.id.btn_show_expenses)
+    Button btnShowExpenses;
 
     @Override
     protected int getContentViewRes() {
@@ -35,13 +50,9 @@ public class MainActivity extends BaseActivity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        final ImageView imageMain = findViewById(R.id.iv_main);
-        final TextView mainText = findViewById(R.id.tv_main);
-        final Button btnSave = findViewById(R.id.save_bt);
-        final Button btnShow = findViewById(R.id.show_db);
-        final EditText priceET = findViewById(R.id.price_et);
-        final EditText detailsET = findViewById(R.id.details_et);
-        priceET.addTextChangedListener(new MoneyTextWatcher(priceET));
+
+        edtPrice.addTextChangedListener(new MoneyTextWatcher(edtPrice));
+
         final Date currentTime = Calendar.getInstance().getTime();
 
         final DatabaseHandler databaseHandler = new DatabaseHandler(this);
@@ -66,17 +77,17 @@ public class MainActivity extends BaseActivity {
                     if (split_money[0].equals("انتقال") || split_money[0].equals("خریداینترنتی") || split_money[0].equals("برداشت") || split_money[0].equals("خودپرداز")) {
                         String money = split_money[1];
                         if (money.substring(money.length() - 1).equals("-")) {
-                            imageMain.setImageResource(R.drawable.pic2);
-                            mainText.setText(R.string.down_money_msg);
-                            priceET.setHint(R.string.price_downmoney_hint);
-                            detailsET.setHint(R.string.details_downmoney_hint);
-                            priceET.setText(money.substring(0, money.length() - 2).replaceAll("[,]", ""));
+                            ivMain.setImageResource(R.drawable.pic2);
+                            tvMain.setText(R.string.down_money_msg);
+                            edtPrice.setHint(R.string.price_downmoney_hint);
+                            edtDetails.setHint(R.string.details_downmoney_hint);
+                            edtPrice.setText(money.substring(0, money.length() - 2).replaceAll("[,]", ""));
                         } else if (money.substring(money.length() - 1).equals("+")) {
-                            imageMain.setImageResource(R.drawable.pic3);
-                            mainText.setText(R.string.up_money_msg);
-                            priceET.setHint(R.string.price_upmoney_hint);
-                            detailsET.setHint(R.string.details_upmoney_hint);
-                            priceET.setText(money.substring(0, money.length() - 2).replaceAll("[,]", ""));
+                            ivMain.setImageResource(R.drawable.pic3);
+                            tvMain.setText(R.string.up_money_msg);
+                            edtPrice.setHint(R.string.price_upmoney_hint);
+                            edtDetails.setHint(R.string.details_upmoney_hint);
+                            edtPrice.setText(money.substring(0, money.length() - 2).replaceAll("[,]", ""));
                         }
                     }
                 } else if (sender.equals("Bank Mellat")) {
@@ -89,12 +100,12 @@ public class MainActivity extends BaseActivity {
         btnSave.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
 
-                if (!priceET.getText().toString().equals("") && !detailsET.getText().toString().equals("")) {
-                    TransActions transActionsObj = new TransActions(priceET.getText().toString(), detailsET.getText().toString(), currentTime.toString());
+                if (!edtPrice.getText().toString().equals("") && !edtDetails.getText().toString().equals("")) {
+                    TransActions transActionsObj = new TransActions(edtPrice.getText().toString(), edtDetails.getText().toString(), currentTime.toString());
                     databaseHandler.addTransAction(transActionsObj);
                     Toast.makeText(getBaseContext(), R.string.saved_msg, Toast.LENGTH_SHORT).show();
-                    priceET.setText("");
-                    detailsET.setText("");
+                    edtPrice.setText("");
+                    edtDetails.setText("");
                 } else {
                     Toast.makeText(getBaseContext(), R.string.complete_fields_msg, Toast.LENGTH_SHORT).show();
                 }
