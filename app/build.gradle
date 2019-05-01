@@ -17,6 +17,10 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
 }
 
 dependencies {
@@ -25,5 +29,6 @@ dependencies {
     implementation "androidx.constraintlayout:constraintlayout:$CONSTRAINTLAYOUT_VERSION"
     implementation "io.github.inflationx:calligraphy3:$CALLIGRAPHY_VERSION"
     implementation "io.github.inflationx:viewpump:$VIEWPUMP_VERSION"
-
+    implementation "com.jakewharton:butterknife:$BUTTERKNIFE_VERSION"
+    annotationProcessor "com.jakewharton:butterknife-compiler:$BUTTERKNIFE_VERSION"
 }
