@@ -3,4 +3,8 @@
     <color name="colorPrimary">#363a42</color>
     <color name="colorPrimaryDark">#3d4149</color>
     <color name="colorAccent">#363a42</color>
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+    <color name="bottombar_background">#1d1d1d</color>
+    <color name="bottombar_fab">#f8f8f8</color>
 </resources>
