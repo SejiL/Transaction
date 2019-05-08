@@ -4,7 +4,6 @@ public class TransActions {
     public String price;
     public String details;
     public String transactiontime;
-
     public String getPrice() {
         return price;
     }
