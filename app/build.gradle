@@ -32,4 +32,6 @@ dependencies {
     implementation "io.github.inflationx:viewpump:$VIEWPUMP_VERSION"
     implementation "com.jakewharton:butterknife:$BUTTERKNIFE_VERSION"
     annotationProcessor "com.jakewharton:butterknife-compiler:$BUTTERKNIFE_VERSION"
+    implementation "androidx.cardview:cardview:$ANDROIDX_CARDVIEW_VERSION"
+    implementation "androidx.recyclerview:recyclerview:$ANDROIDX_RECYCLERVIEW_VERSION"
 }
