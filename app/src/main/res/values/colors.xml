@@ -7,4 +7,6 @@
     <color name="black">#000000</color>
     <color name="bottombar_background">#363a42</color>
     <color name="bottombar_fab">#f8f8f8</color>
+    <color name="textColorPrimary">#DE000000</color>
+    <color name="textColorSecondary">#8A000000</color>
 </resources>
