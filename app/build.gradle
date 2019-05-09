@@ -26,9 +26,12 @@ android {
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation "androidx.appcompat:appcompat:$ANDROIDX_APPCOMPAT_VERSION"
+    implementation "com.google.android.material:material:$ANDROIDX_MATERIAL_VERSION"
     implementation "androidx.constraintlayout:constraintlayout:$CONSTRAINTLAYOUT_VERSION"
     implementation "io.github.inflationx:calligraphy3:$CALLIGRAPHY_VERSION"
     implementation "io.github.inflationx:viewpump:$VIEWPUMP_VERSION"
     implementation "com.jakewharton:butterknife:$BUTTERKNIFE_VERSION"
     annotationProcessor "com.jakewharton:butterknife-compiler:$BUTTERKNIFE_VERSION"
+    implementation "androidx.cardview:cardview:$ANDROIDX_CARDVIEW_VERSION"
+    implementation "androidx.recyclerview:recyclerview:$ANDROIDX_RECYCLERVIEW_VERSION"
 }

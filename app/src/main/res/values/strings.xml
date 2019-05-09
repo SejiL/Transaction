@@ -14,4 +14,5 @@
     <string name="saved_msg">ثبتش کردم, سرماه میره تو پاچت.</string>
     <string name="complete_fields_msg">فیلدارو پر کن :|</string>
     <string name="vazir_font_digit">fonts/vazir_medium_digit.ttf</string>
+    <string name="action_statistics">Statistics</string>
 </resources>
